@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Filter from "./Filter";
 import Item from "./Item";
 
 function ShoppingList({ items }) {
@@ -29,6 +30,7 @@ function ShoppingList({ items }) {
           <Item key={item.id} name={item.name} category={item.category} />
         ))}
       </ul>
+      <Filter onCategoryChange={handleCategoryChange} />
     </div>
   );
 }
